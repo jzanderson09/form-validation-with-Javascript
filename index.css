@@ -6,29 +6,44 @@
 
 .container {
     align-items: center;
-    border: 3px solid red;
+    border: 3px outset black;
+    border-radius: 10%;
     display: flex;
     justify-content: center;
-    margin: auto;
     padding: 5%;
-    width: 80%;
 }
 
-form {
+.form-validation {
     align-items: center;
-    border: 5px outset blue;
+    border: 3px outset black;
+    border-radius: 10%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    width: 50%;
+    padding: 3%;
 }
 
-input:invalid {
-  border: 2px solid red;
-  background-color: #fee;
+input, select {
+  border: 3px outset #ccc;
+  border-radius: 10px;
+  /* margin: 1% auto; */
+  padding: 2%;
+  width: 100%;
 }
 
-input:valid {
-  border: 2px solid green;
-  background-color: #efe;
+input:user-invalid, 
+select:user-invalid {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+.error-msg {
+  display: none;
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.error-msg.active {
+  display: block;
 }
